@@ -1,5 +1,5 @@
 # UTSAVA
-<p>welcome to Utsava a microservice architechture based online ceremonial hall booking service based on MVC model</p>
+welcome to Utsava a microservice architechture based online ceremonial hall booking service based on MVC model
 </br>
-</br>
-## Project Setup 
+## Project Setup
+ 
