@@ -13,6 +13,25 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      phone:{
+        type: Sequelize.STRING,
+        allowNull:false
+      },
+
+      email: {
+        type: Sequelize.STRING,
+        allowNull: FontFaceSetLoadEvent
+      },
+
+      password: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      booking_date: {
+        type: Sequelize.STRING,
+        allowNull: true
+
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
