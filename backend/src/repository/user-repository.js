@@ -42,7 +42,7 @@ class UserRepository {
     async getUser(userId){
         try {
             const user = await User.findbyPK(userId);
-            return User;
+            return user;
         } catch (error) {
             console.log("Something went wrong in the repository layer ");
             throw {error};
