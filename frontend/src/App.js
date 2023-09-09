@@ -7,6 +7,8 @@ from 'react-router-dom'
 import Homepage from './Pages/Homepage';
 import Register from './Pages/Register';
 import Login from './Pages/Login';
+import Gallery from './Pages/Gallery';
+import Contact from './Pages/Contact';
 function App() {
   return (
     <>
@@ -15,6 +17,8 @@ function App() {
         <Route exact path='/' Component={Homepage} />
         <Route path='/register' Component={Register}/>
         <Route path='/login' Component={Login}/>
+        <Route path='/gallery' Component={Gallery}/>
+        <Route path='/contact' Component={Contact}/>
       </Routes>
     </Router>
     </>
@@ -22,3 +26,6 @@ function App() {
 }
 
 export default App;
+
+
+
