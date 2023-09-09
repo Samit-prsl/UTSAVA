@@ -9,6 +9,8 @@ import Register from './Pages/Register';
 import Login from './Pages/Login';
 import Gallery from './Pages/Gallery';
 import Contact from './Pages/Contact';
+import Venues from './Pages/Venues';
+import Services from './Pages/Services';
 function App() {
   return (
     <>
@@ -19,6 +21,8 @@ function App() {
         <Route path='/login' Component={Login}/>
         <Route path='/gallery' Component={Gallery}/>
         <Route path='/contact' Component={Contact}/>
+        <Route path='/venues' Component={Venues}/>
+        <Route path='/services' Component={Services}/>
       </Routes>
     </Router>
     </>
