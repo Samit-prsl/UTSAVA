@@ -7,6 +7,7 @@ class UserRepository {
             return user;
             
         } catch (error) {
+            console.log("Something went wrong in the repository layer");
             throw {error};
         }
     }
@@ -19,8 +20,34 @@ class UserRepository {
                     },
                 });
             } catch (error) {
+                console.log("Something went wrong in the repository layer");
                 throw {error};
             }
+    }
+
+    async updateUser(userId,data){
+        try {
+            const user = await User.update(data,{
+                where: {
+                    id : userId
+                }
+            });
+            return user;
+        } catch (error) {
+            console.log("Something went wrong in the repository layer");
+            throw {error};
+            
+        }
+    }
+    async getUser(userId){
+        try {
+            const user = await User.findbyPK(userId);
+            return User;
+        } catch (error) {
+            console.log("Something went wrong in the repository layer ");
+            throw {error};
+            
+        }
     }
 }
 
