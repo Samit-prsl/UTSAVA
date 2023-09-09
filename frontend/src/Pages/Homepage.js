@@ -26,7 +26,7 @@ export default function Homepage() {
              <li className='cursor-pointer hover:text-gray-900' title='Venue'>sthanam</li>
              <li title='Services' className='cursor-pointer hover:text-gray-900'>seva</li>
              <a href="/gallery"><li title='photos' className='cursor-pointer hover:text-gray-900'>gallery</li></a>
-             <li title='contact' className='cursor-pointer hover:text-gray-900 '>sampark</li>
+             <a href="/contact"><li title='contact' className='cursor-pointer hover:text-gray-900 '>sampark</li></a>
          </ul>
          </>
          :
@@ -38,7 +38,7 @@ export default function Homepage() {
                 <li className='cursor-pointer hover:text-gray-900' title='Venue'>sthanam</li>
                 <li title='Services' className='cursor-pointer hover:text-gray-900'>seva</li>
                 <a href="/gallery"><li title='photos' className='cursor-pointer hover:text-gray-900'>gallery</li></a>
-                <li title='contact' className='cursor-pointer hover:text-gray-900 '>sampark</li>
+                <a href='/contact'><li title='contact' className='cursor-pointer hover:text-gray-900 '>sampark</li></a>
             </ul>
         </div>
         <Slider/>
