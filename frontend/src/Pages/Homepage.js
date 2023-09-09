@@ -23,8 +23,8 @@ export default function Homepage() {
             <RxCross1 className=' cursor-pointer text-xl' onClick={()=>{Setdropdown(false)}}/>
             </div>
              <ul className=' flex-col justify-between gap-5 font-[Cinzel] text-gray-600 lg:text-2xl text-center text-xl py-2'>
-             <li className='cursor-pointer hover:text-gray-900' title='Venue'>sthanam</li>
-             <li title='Services' className='cursor-pointer hover:text-gray-900'>seva</li>
+             <a href="/venues"><li className='cursor-pointer hover:text-gray-900' title='Venue'>sthanam</li></a>
+             <a href="/services"><li title='Services' className='cursor-pointer hover:text-gray-900'>seva</li></a>
              <a href="/gallery"><li title='photos' className='cursor-pointer hover:text-gray-900'>gallery</li></a>
              <a href="/contact"><li title='contact' className='cursor-pointer hover:text-gray-900 '>sampark</li></a>
          </ul>
@@ -35,8 +35,8 @@ export default function Homepage() {
         </div>
             }
             <ul className=' lg:flex lg:justify-between font-[Cinzel] text-gray-600 lg:text-2xl hidden text-xl'>
-                <li className='cursor-pointer hover:text-gray-900' title='Venue'>sthanam</li>
-                <li title='Services' className='cursor-pointer hover:text-gray-900'>seva</li>
+            <a href="/venues"><li className='cursor-pointer hover:text-gray-900' title='Venue'>sthanam</li></a>
+            <a href="/services"><li title='Services' className='cursor-pointer hover:text-gray-900'>seva</li></a>
                 <a href="/gallery"><li title='photos' className='cursor-pointer hover:text-gray-900'>gallery</li></a>
                 <a href='/contact'><li title='contact' className='cursor-pointer hover:text-gray-900 '>sampark</li></a>
             </ul>
