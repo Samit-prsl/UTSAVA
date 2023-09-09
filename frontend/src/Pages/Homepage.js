@@ -25,7 +25,7 @@ export default function Homepage() {
              <ul className=' flex-col justify-between gap-5 font-[Cinzel] text-gray-600 lg:text-2xl text-center text-xl py-2'>
              <li className='cursor-pointer hover:text-gray-900' title='Venue'>sthanam</li>
              <li title='Services' className='cursor-pointer hover:text-gray-900'>seva</li>
-             <li title='photos' className='cursor-pointer hover:text-gray-900'>gallery</li>
+             <a href="/gallery"><li title='photos' className='cursor-pointer hover:text-gray-900'>gallery</li></a>
              <li title='contact' className='cursor-pointer hover:text-gray-900 '>sampark</li>
          </ul>
          </>
@@ -37,7 +37,7 @@ export default function Homepage() {
             <ul className=' lg:flex lg:justify-between font-[Cinzel] text-gray-600 lg:text-2xl hidden text-xl'>
                 <li className='cursor-pointer hover:text-gray-900' title='Venue'>sthanam</li>
                 <li title='Services' className='cursor-pointer hover:text-gray-900'>seva</li>
-                <li title='photos' className='cursor-pointer hover:text-gray-900'>gallery</li>
+                <a href="/gallery"><li title='photos' className='cursor-pointer hover:text-gray-900'>gallery</li></a>
                 <li title='contact' className='cursor-pointer hover:text-gray-900 '>sampark</li>
             </ul>
         </div>
