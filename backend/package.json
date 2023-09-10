@@ -4,7 +4,7 @@
   "description": "Online ceremonial hall booking service",
   "main": "server.js",
   "scripts": {
-    "start": "npx src/server"
+    "start": "nodemon run server.js"
   },
   "keywords": [],
   "author": "",
