@@ -11,7 +11,7 @@ export default function Footer() {
       <div className='flex flex-col lg:w-[33%] font-[Cinzel] my-3 lg:my-0'>
         <h1 className=' text-2xl text-black tracking-wide text-center py-2'>ENQUIRE</h1>
         <div className=' flex justify-center items-center py-3'>
-        <button className=' px-2 lg:w-1/2 py-2 bg-cyan-400 text-black hover:bg-cyan-600 hover:text-white'>WEDDING PLANNER</button>
+        <button className=' px-2 lg:w-1/2 py-2 bg-cyan-400 text-black hover:bg-cyan-600 hover:text-white'><a href="/contact">WEDDING PLANNER</a></button>
         </div>
       </div>
       <div className='flex flex-col lg:w-[33%] font-[Cinzel] my-3 lg:my-0'>
