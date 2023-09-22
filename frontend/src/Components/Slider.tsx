@@ -2,13 +2,13 @@ import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 export default function Slider() {
-    const CarouselSlides = {
+    const CarouselSlides  = {
         height : '25%'
     }
   return (
     <div className=' py-3'>
        <div className=''>
-       <Carousel showThumbs={false}  showArrows={false} showStatus={false} style={CarouselSlides} autoPlay infiniteLoop >
+       <Carousel showThumbs={false}  showArrows={false} showStatus={false}  autoPlay infiniteLoop >
                 <div className=''>
                     <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt='...' className='' />
                 </div>
