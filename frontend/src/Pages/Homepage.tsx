@@ -9,6 +9,9 @@ export default function Homepage() {
 
  const [dropdown,Setdropdown] = useState(false)
 
+
+ 
+
   return (
    <div className=' min-h-screen  flex overflow-x-hidden'>
     <div className='  lg:flex-[0.25] flex-[0.5] '>
