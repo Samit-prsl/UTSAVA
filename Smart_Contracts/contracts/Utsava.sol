@@ -12,6 +12,7 @@ contract Utsava {
     }
 
     struct Hall {
+
         uint256 Id;
         string Name;
         string Address;
@@ -21,13 +22,14 @@ contract Utsava {
         string Special;
         uint256 Capacity;
         uint256 Price;
-        bool Availability;
+
     }
 
     mapping (address => Hall[]) public Halls;
     mapping (uint256 => uint256[]) public HallDates;
 
     struct User {
+
         uint256 Id;
         string Name;
         address Wallet;
@@ -38,7 +40,8 @@ contract Utsava {
     }
 
     mapping (address => User[]) public Users;
-
+    mapping (uint256 => uint256[]) public Bookings;
+    
     modifier onlyOwner() {
         require(msg.sender == Owner,"Only Owner can access!");
         _;
@@ -46,11 +49,6 @@ contract Utsava {
 
     modifier capacityFullOrNot(uint _id1, uint _id2) {
         require(Users[Owner][_id2].Invitations <= Halls[Owner][_id1].Capacity,"Capacity full");
-        _;
-    }
-
-    modifier availableOrNot(uint _id1) {
-        require(Halls[Owner][_id1].Availability == false,"Reserved");
         _;
     }
 
@@ -65,8 +63,7 @@ contract Utsava {
                 Decoration : _Decoration,
                 Special : _Special,
                 Capacity : _Capacity,
-                Price : _Price,
-                Availability : false
+                Price : _Price
         });
 
         Halls[Owner].push(newHall);
@@ -107,17 +104,33 @@ contract Utsava {
         return Users[Owner][i];
     }
 
-    function requestBooking(uint256 _id1,uint256 _id2) public payable capacityFullOrNot(_id1,_id2) availableOrNot(_id1) returns(bool confirmation) {
+    function requestBooking(uint256 _id1,uint256 _id2) public payable capacityFullOrNot(_id1,_id2) returns(bool confirmation) {
         
         require((Users[Owner][_id2].Wallet).balance >= Halls[Owner][_id1].Price,"Insufficient funds");
-        require(HallDates[_id1][HallDates[_Id1].length - 1] != Users[Owner][_id2].Date,"Hall Booked");
+        for (uint i = 0; i < HallDates[_id1].length; i++) {
+            require(HallDates[_id1][i] != Users[Owner][_id2].Date,"Hall Booked");
+        }
         payable(Owner).transfer(Halls[Owner][_id1].Price);
         confirmation = true;
         return confirmation;
 
     }
 
-    function confirmBookingFromHall() public  {
+    function confirmBookingFromHall(bool _confirmation,uint256 _id1,uint256 _id2) public  {
         
+        require(_confirmation == true,"Cannot initiate Booking!");
+        HallDates[_id1].push(Users[Owner][_id2].Date);
+        Halls[Owner][_id1].Capacity -= Users[Owner][_id2].Invitations;
+        Bookings[_id2].push(_id1);
+
+    }
+
+    function bookingHistoryForUsers(uint256 _id2) view public returns (string[] memory hallNames) {
+        
+        hallNames = new string[](Bookings[_id2].length);
+        for(uint i = 0; i < Bookings[_id2].length; i++) {
+            hallNames[i] = Halls[Owner][i].Name;
+        }
+        return hallNames;
     }
 }
